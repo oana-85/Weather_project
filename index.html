@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/styles.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/43151f1cf4.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+    <header>
+            <div class="row">
+                <div class="col-2">
+                <img class="header-img" src="media/animated/day.svg">
+               </div>
+    <div class="col-6">
+    <h1 class="title">
+        <a href ="https://www.timeanddate.com/weather/antarctica/south-pole/ext" target="_blank">
+            W-FORECAST
+            </a>
+    </h1>
+    </div>
+            <div class="col-4">
+                 <button id="current-location" >
+                     <img src="media/animated/compass.png">
+                 </button> 
+                <form class="form-wrapper" id="search">
+                <input type="text" class="forariam-control" placeholder="Search for city or place..." autocomplete="off" autofocus="on" id="search-text-input">
+               <input type="submit" value ="go" id="submit">
+                </form>
+            </div>
+        </div>
+    </header>
+    </div>
+</br>
+<div class="weather-summary">
+    <div class="row">
+        <div class= "col-6">
+            <div class="row">
+    <div class="col-12 h1" >
+       <h2 id="place">South Pole, Antarctica</h2>
+    </div>
+    </div>
+    <div class= "row">
+        <div class="col-6 h1" id="date-time">
+            <span id="weekday">Tuesday </span>
+        </br>
+         <p>16 Feb 2021</p>
+         </div>
+         <div class= "col-4 h1" id="Current-time">
+          Current time </br> <span id="time">00:34</span>
+         </div>
+    </div>
+        </div>
+        <div class="col-4 h2">
+     <span class="strong">Currently:</span></br>
+     <i class="icon"><img src="media/animated/day.svg" alt ="" width ="70px"
+         id="icon">  
+        </i>
+     <span class="temperature" id="temperature">
+         -41 </span>
+     <span class="temp"><a href ="#" id = "celsius-link">°C</a> |<a href="#" id="fahrenheit-link">°F</a>
+      </span>
+       <p class="snow" id="description">Snow flurries</p>
+    </div>
+    <div class = "col-4 sm-4">
+        <div class ="card" id="feels">
+        <ul>
+            <p>
+                <img src = "media/animated/humidity.png"> Humidity: <span id="humidity"></span>
+                %
+            </p>
+            <p>
+            <img src="media/animated/wind.png"> Wind: <span id="wind"></span>
+                km/h
+            </p>
+        </ul>
+        </div>
+    </div>
+</div>
+</div>
+</br>
+</br>
+<div class="weather-forecast" id = "forecast">
+ 
+</div>
+<footer>
+    <small>
+        <a href="https://github.com/oana-85/Weather-main" target="blank">
+     Coded</a>
+    , by Oana Henry
+    </small>
+</footer>
+<script src="src/index.js"></script>
+</body>
+</html>
